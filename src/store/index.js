@@ -1,15 +1,18 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import root from "@/store/modules/root";
+import state from "@/store/state";
+import getters from "@/store/getters";
+import mutations from "@/store/mutations";
+import actions from "@/store/actions";
 import counter from "@/store/modules/counter";
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-    state: root.state,
-    getters: root.getters,
-    mutations: root.mutations,
-    actions: root.actions,
+    state,
+    getters,
+    mutations,
+    actions,
     modules: {
         counter
     }
